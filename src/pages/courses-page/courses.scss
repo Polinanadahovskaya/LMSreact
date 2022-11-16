@@ -1,0 +1,63 @@
+@use '../../styles/abstacts/' as *;
+
+.main {
+  margin: 20px 40px;
+}
+
+.courses {
+  &__header {
+    margin-bottom: 20px;
+  }
+}
+
+.course {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: rgba(173, 173, 173, 0.267);
+  height: 250px;
+  &__image {
+    width: 300px;
+    border-radius: 10px 0 0 10px;
+  }
+  &__title {
+    align-self: center;
+  }
+  &-active {
+    box-shadow: $box-shadow-green;
+    .btn {
+      align-self: flex-end;
+      margin-right: 15px;
+    }
+    &__header {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.similar-courses {
+  display: flex;
+  margin-top: 50px;
+  gap: 10px;
+  flex-direction: column;
+  h1 {
+    color: rgb(187, 187, 187);
+  }
+  .course-secondary {
+    justify-content: flex-start;
+    .btn {
+      margin-top: 15px;
+    }
+  }
+  .course-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 15px 0;
+    margin: 0 20px;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+}

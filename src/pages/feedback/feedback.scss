@@ -1,0 +1,80 @@
+@use '/Users/polinanadahovskaa/LMSLearnHubReact-1/src/styles/abstacts' as *;
+
+@use '/Users/polinanadahovskaa/LMSLearnHubReact-1/src/styles/common/reset.scss';
+@use '/Users/polinanadahovskaa/LMSLearnHubReact-1/src/styles/layout/header.scss';
+
+html {
+  background: $background-main;
+}
+.rating-area {
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.stars_div {
+  width: 100%;
+}
+.rating-area:not(:checked) > input {
+  display: none;
+}
+.rating-area:not(:checked) > label {
+  float: right;
+  width: 42px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 50px;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+  content: '★';
+}
+.rating-area > input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+  color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+  position: relative;
+}
+
+.h1 {
+  text-align: center;
+  margin: 30px;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textarea {
+  box-shadow: $box-shadow-green;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.btn {
+  border: 2px solid $base-green;
+  width: 200px;
+  font-size: 16px;
+}
